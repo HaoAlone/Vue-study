@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <meta charset="UTF-8">
+    <title>时间</title>
+</head>
+<body>
+
+<div id="app">
+    {{ date }} <br>
+    <!--管道过滤器 | filter1 | filter2 | filter3(val1,val2)  过滤器串联 参数-->
+    {{ date | formatter }}
+
+
+    <div class={></div>
+</div>
+
+<script>
+    function dateTransform(date) {
+        return date < 10 ? "0"+date :date
+    }
+
+    var app = new Vue({
+        el:"#app",
+        data:{
+            date:new Date(),
+            s:"trans"
+        },
+        filters:{
+            formatter: function (value) {
+                let date = new Date(value);
+                let year = date.getFullYear();
+                let month = dateTransform(date.getMonth());
+                let day = dateTransform(date.getDay());
+                let hour = dateTransform(date.getHours());
+                let minus = dateTransform(date.getMinutes());
+                let sec = dateTransform(date.getSeconds());
+                return year+"-"+month+"-"+day+"-"+hour+"-"+minus+"-"+sec ;
+
+            }
+        },
+        mounted:function () {
+            let _this = this;
+            this.timer = setInterval(()=>{
+                _this.date = new Date();
+            },1000)
+        }
+    })
+    
+    
+</script>
+</body>
+</html>

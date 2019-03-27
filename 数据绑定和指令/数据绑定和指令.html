@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--//环境搭建-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+    <p>vue实例</p>
+    <!--文本插值-->
+    {{msg}}<br>
+    <!--运算-->
+    {{ 6+7 }} <br>
+    {{ 6>7 ? msg:a }} <br>
+    <!--{{ var a = 9 }} 不支持多行表达式-->
+</div>
+
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            msg:"hello world",
+            a:"123"
+        },
+        created:function (){
+            // alert("尚未挂在");
+        },
+        mounted:function(){
+            // alert("已挂在")
+        }
+    })
+
+//    访问vue实例中的属性 app.$
+    console.log(app.$el);
+    console.log(app.$data);
+    //访问vue实例的data数据 app.msg
+    console.log(app.msg)
+</script>
+</body>
+</html>

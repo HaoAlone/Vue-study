@@ -3,7 +3,7 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <meta charset="UTF-8">
-    <title>时间</title>
+    <title>过滤器</title>
 </head>
 <body>
 
@@ -12,8 +12,9 @@
     <!--管道过滤器 | filter1 | filter2 | filter3(val1,val2)  过滤器串联 参数-->
     {{ date | formatter }}
 
-
-    <div class={></div>
+    <br >
+    <span>v-text</span><br>
+    <div v-text="s">v-text</div>
 </div>
 
 <script>
@@ -25,7 +26,7 @@
         el:"#app",
         data:{
             date:new Date(),
-            s:"trans"
+            s:"32413434"
         },
         filters:{
             formatter: function (value) {

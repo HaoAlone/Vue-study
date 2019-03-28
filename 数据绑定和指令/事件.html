@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>事件</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .app {
+            width: 200px;
+            background-color: red;
+            position: relative;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .app > .test {
+            width: 100px;
+            height: 100px;
+            background: green;
+            border: 1px solid;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="app">
+    <p>就如黄执中追问的那个问题一样，这样的伤害，这样的痛苦，有什么意义呢？它能够带给黄执中的只有阴影，只有创伤，这种伤害成了黄执中一辈子都无法跨越的坎。所以，这个时候，你告诉我，要感谢那些伤害过我的人？别逗了，伤害就是伤害，没有任何正面价值。作家毕淑敏说自己几十年都没办法唱歌，也很害怕在众人面前发言。因为她小学时被音乐老师责骂跑调，在合唱队里被要求只许张口不许出声。她形容说：“烙红的伤痕直到数十年后依然冒着焦糊的青烟。”</p>
+
+    <div class="test">
+        发二娃染发的房间卡拉的积分
+        发二娃染发的房间卡拉的积分
+        发二娃染发的房间卡拉的积分
+    </div>
+</div>
+
+<script>
+    let app = new Vue({
+        el: "app",
+        data: {
+            text: "v-text",
+            html: "v-html",
+            vOn: "v-on",
+            vVind: "v-bind"
+        }
+    })
+</script>
+
+</body>
+</html>

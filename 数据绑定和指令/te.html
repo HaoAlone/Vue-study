@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        html  {
+            border: 1px solid red;
+            height: 100%;
+            font-size: 20vw;
+        }
+        .test {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div class="test">
+我热情威锋网
+    <button>关闭</button>
+</div>
+
+<script>
+    document.querySelector("button").onclick = function () {
+        window.opnener = null;
+        window.open("","_self");
+        console.log(window.opener)
+        window.close()
+    };
+    let a = window.navigator;
+    let b ="";
+    console.log(Object.keys(a ))
+    Object.keys(a).forEach(i=>{
+        b+=i.toString();
+        b+=a[i].toString();
+    })
+    console.log(b)
+</script>
+</body>
+</html>

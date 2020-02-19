@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>render函数初步了解</title>
+
+</head>
+<body>
+
+<div id="app">
+    <child></child>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script>
+    Vue.component('child', {
+        render: function (createElement) {
+            //第一个参数必选 元素
+            //string
+            // return createElement("div")
+            //object  一个含有数据选项的对象
+            // return createElement({
+            //     template:'<div>锄禾日当午</div>'
+            // });
+            //Function 方法返回含有数据选项的对象
+            // var fn = function () {
+            //     return {
+            //         template:'<div>锄禾日当午</div>'
+            //     }
+            // }
+            // return createElement(fn())
+
+        }
+    });
+
+
+    var app = new Vue({
+        el: "#app",
+        data: {}
+    })
+</script>
+</body>
+</html>

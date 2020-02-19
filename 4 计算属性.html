@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+</head>
+<body>
+<div id="demo">
+    {{text}}
+    {{text.split(',').reverse().join(',')}}
+
+    {{ts}}
+</div>
+
+<!--计算属性有缓存，只要依赖属性不变就不变-->
+<!--setter getter 默认getter-->
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+
+    var app = new Vue({
+        el:'#demo',
+        data:{
+          text:'123,456,789'
+        },
+        computed:{
+            ts1:function(){
+                return this.text.split(',').reverse().join(',')
+            },
+            ts: {
+                get:function () {
+                    return this.text.split(',').reverse().join(',')
+                },
+                set:function (newValue) {
+
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

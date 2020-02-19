@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>render函数初步了解</title>
+
+</head>
+<body>
+
+<div id="app">
+    <child>
+        <p>锄禾日党务</p>
+        <p>汗滴禾下土</p>
+        <template v-slot:header><p>标题</p></template>
+        <template v-slot:footer><h1>文章尾部</h1></template>
+    </child>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script>
+    Vue.component('child', {
+        render: function (h) {
+            console.log(this.$slots)
+            var main = this.$slots.default;
+            var header = this.$slots.header;
+            var footer = this.$slots.footer;
+
+            return h("div", [
+                h('header', header),
+                h('main', main),
+                h('footer', footer),
+            ])
+        }
+    });
+
+
+    var app = new Vue({
+        el: "#app",
+        data: {}
+    })
+</script>
+</body>
+</html>

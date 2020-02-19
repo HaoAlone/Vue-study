@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件的使用方法</title>
+</head>
+<body>
+<div id="app">
+    <my-component>
+
+    </my-component>
+    <table>
+        我是table
+        html标签受限 <br>
+        table中只能有tr, td,tbody元素,
+        <my-component>
+
+        </my-component>
+        <tbody is="my-component"></tbody>
+    </table>
+
+</div>
+<div id="bpp">
+    <bpp-component>
+
+    </bpp-component>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    // 1.全局注册
+    // 优点:所有vue实例都可以使用
+    // 缺点:权限太大，占内存，容错率降低
+    // Vue.component(tag,{
+    //     template:"<div></div>"
+    // })
+
+    Vue.component("my-component",{
+        template:"<div>我是app一个组件</div>"
+    })
+
+    var app = new Vue({
+        el:"#app",
+        data:{
+
+        }
+    })
+
+    // 2.局部注册
+    var bpp = new Vue({
+        el:"#bpp",
+        components:{
+            "bpp-component":{
+                template: "<div>我是bpp中的组件</div>"
+            }
+        },
+        data:{
+
+        }
+    })
+
+</script>
+
+</body>
+</html>

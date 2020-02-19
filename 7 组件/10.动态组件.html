@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态组件</title>
+    <style>
+        #app {
+            border: 2px solid black;
+            width: 600px;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 3px;
+            margin: 100px auto 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <component :is="view"></component>
+    <button @click="handle('A')">1</button>
+    <button @click="handle('B')">2</button>
+    <button @click="handle('C')">3</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    // component元素
+    // 动态挂在组件 ，is实现
+    Vue.component('comA',{
+        template:"<div>我是a</div>"
+    })
+
+    Vue.component('comB',{
+        template:"<div>我是b</div>"
+    })
+    Vue.component('comC',{
+        template:"<div>我是c</div>"
+    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            view: 'comA',
+        },
+        methods:{
+            handle:function (value) {
+                this.view = 'com'+ value
+            }
+        }
+    })
+</script>
+</body>
+</html>

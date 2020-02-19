@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域插槽</title>
+
+</head>
+<body>
+
+<div id="app">
+<!--    <child>-->
+<!--        <template scope="prop" >-->
+<!--            {{prop}}-->
+<!--        </template>-->
+<!--    </child>-->
+<!--    <br>-->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script>
+    Vue.component('child', {
+        props: ["name"],
+        render: function (h) {
+            // `<div><slot :text="子组件中的数据"></slot></div>`
+            return h('div',this.$scopedSlots.default({
+                text:this.text,
+                name:"嘿嘿嘿"
+            }))
+
+        },
+        data:function () {
+            return {
+                text:'子组件中的数据'
+            }
+        }
+    });
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            msg: "父组件数据"
+        },
+        render(h){
+            return h('div', [
+                "APP",
+                h('child', {
+                    // 在数据对象中传递 `scopedSlots`
+                    // 格式为 { name: props => VNode | Array<VNode> }
+                    // 想当于 `<child><template scope="prop" > {{prop.text}}</template> </child>`
+                    scopedSlots: {
+                        default: function (props) {
+                            return h('span', props.text)
+                        }
+                    }
+                })
+            ])
+        },
+        methods: {
+
+        }
+    })
+</script>
+</body>
+</html>

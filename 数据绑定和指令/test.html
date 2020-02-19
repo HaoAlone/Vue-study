@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p {
+            margin: 10px;
+            border: 1px solid;
+        }
+        p[data-src~="val"]{
+            color: red;
+        }
+        p[data-src~="qwe"]{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<p  data-src="val qwe" id="1">1</p>
+<p data-src="val3">2</p>
+<p data-src="valr">3</p>
+<p data-src="123val">4</p>
+
+<script>
+    let a =document.getElementById("1").getAttribute("data-src")
+    console.log(a)
+</script>
+</body>
+</html>

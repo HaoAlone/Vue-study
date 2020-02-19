@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>render函数初步了解</title>
+
+</head>
+<body>
+
+<div id="app">
+    <child :level="level">
+        父组件传递的数据
+    </child>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script>
+
+    Vue.component('child', {
+        render: function (createElement) {
+            return createElement(
+                "h" + this.level,//标签名称
+                this.$slots.default //子节点数组
+            )
+        },
+        props: ['level']
+    })
+    var app = new Vue({
+        el: "#app",
+        data: {
+            level: 2
+        }
+    })
+</script>
+</body>
+</html>

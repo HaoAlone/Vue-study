@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据验证</title>
+</head>
+<body>
+<div id="app">
+<type :a = a :b=b  :c=c :d=d :e=e :f=f :g="g"></type>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    var app = new Vue({
+        el:'#app',
+        components:{
+            type:{
+                template:"<ul><li v-for='item in text'>{{item}}</li></ul>",
+                props:{
+                    a:Number,
+                    b:[Number,String],
+                    c:Boolean,
+                    d:{
+                        type: [Object,Number],
+                        default:22222,
+                        required:true
+                    },
+                    e:Array,
+                    f:Function,
+                    g:{
+                        default:function(){
+                          return 9
+                        },
+                        type:String,
+                        validator:function (s) {
+                            return s - 5 >0
+                        }
+                    }
+                },
+                data:function(){
+                  return {
+                      text:this.$props
+                  }
+                },
+                mounted:function () {
+                    console.log(this)
+                }
+            }
+        },
+        data:{
+            a:"1",
+            b:"王八蛋",
+            c:true,
+            d:{'name':"网店"},
+            e:[1,23,4],
+            f:function a() {
+                return 'function'
+            },
+            g:4
+        }
+    })
+</script>
+</body>
+</html>

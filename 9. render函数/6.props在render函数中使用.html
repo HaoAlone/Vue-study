@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>render函数初步了解</title>
+
+</head>
+<body>
+
+<div id="app">
+    <button @click="iclick">点击切换</button>
+    <child :show="show">
+    </child>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script>
+    Vue.component('child', {
+        props:["show"],
+        render: function (h) {
+            return h("img",{
+                attrs:{
+                    src:this.show?"../001.png":"../002/png"
+                },
+                style:{
+                   width:"600px",
+                   height:'400px'
+                }
+            })
+        }
+    });
+
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            show:false
+        },
+        methods:{
+            iclick:function() {
+                this.show = !this.show;
+
+            }
+        }
+    })
+</script>
+</body>
+</html>

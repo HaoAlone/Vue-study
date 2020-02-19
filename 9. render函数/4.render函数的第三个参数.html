@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>render函数初步了解</title>
+
+</head>
+<body>
+
+<div id="app">
+    <child></child>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script>
+    Vue.component('child', {
+        render: function (createElement) {
+        //第三个参数非必选  string ||  Array 代表子节点
+            return createElement('div',{
+                class:{foo:true}
+            },[
+                createElement('h1',{
+                    class:{
+                        arr:true
+                    },
+                    domProps:{
+                        innerText:"我是h1"
+                    }
+                }),
+                createElement('h2',{
+                    class:{
+                        arr:true
+                    },
+                    domProps:{
+                        innerText:"我是h2"
+                    }
+                }),
+            ])
+        }
+    });
+
+
+    var app = new Vue({
+        el: "#app",
+        data: {}
+    })
+</script>
+</body>
+</html>

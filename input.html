@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+
+<div id="app">
+        <div v-for="(row,index) in tableData">
+            <template cope="row">
+                <input type="text" :value="row.name" @change="change(row,$event.target.value,index)">
+                {{index}}
+            </template>
+
+        </div>
+
+</div>
+<script>
+    let data = new Vue({
+        el:"#app",
+        data:{
+            tableData: [{
+                date: '2016-05-02',
+                name: '1',
+                address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+                date: '2016-05-04',
+                name: '2',
+                address: '上海市普陀区金沙江路 1517 弄'
+            }, {
+                date: '2016-05-01',
+                name: '3',
+                address: '上海市普陀区金沙江路 1519 弄'
+            }, {
+                date: '2016-05-03',
+                name: '4',
+                address: '上海市普陀区金沙江路 1516 弄'
+            }]
+        },
+        methods:{
+            change:function (row,val,index) {
+                if(val>1){
+                    this.tableData[index].name="";
+                }else {
+                    this.tableData[index].name=val
+                }
+            },
+            a(){
+                var maxSequence = function(arr){
+                    let max = {x:0,y:0,max:0}
+                    for(let i =0,len=arr.length;i<len;i++){
+                        let sum = i;
+                        for(let y=i+1;y<len;y++){
+                            sum+=y;
+                            if(sum>max.max){
+                                max.max = sum;
+                                max.y = y;
+                            }
+                        }
+                    }
+                     arr.splice(max.x,max.y-max.x+1);
+                    return arr;
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

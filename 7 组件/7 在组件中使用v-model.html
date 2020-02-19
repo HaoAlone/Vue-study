@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子组件给父组件传递数据</title>
+    <style>
+        #app {
+            border: 2px solid black;
+            width: 600px;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 3px;
+            margin: 100px auto 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h5>all {{total}}</h5>
+    <child-component v-model="total">
+        v-model相当于传递了两个prop，一个value值，一个input(默认)事件
+        由于事件类型多样，可以用model来修改事件类型
+
+    </child-component>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        components: {
+            'child-component': {
+                template:`<div>
+                           <input type="checkbox" @change="increase">多选</input>
+                            </div>`,
+                props:['checked'],//取值用 value checked
+                model:{
+                    prop:"checked",
+                    event:'change'
+                },
+                data:function(){
+                    return {
+                    }
+                },
+                mounted:function(){
+                  console.log(this)
+                },
+                methods:{
+                    increase:function (e) {
+                        console.log(e)
+                        this.$emit('change',e.target.checked)
+                    },
+
+                }
+            }
+        },
+        data: {
+            total: true,
+        },
+    })
+</script>
+</body>
+</html>

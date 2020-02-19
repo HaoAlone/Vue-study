@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>props</title>
+</head>
+<body>
+<div id="app" style="border: 2px solid chartreuse;height: 160px;text-align: center">
+    <h5 >我是父组件</h5>
+<!--    prop传值，v-bind说明是js表达式，而不是字符串 "【1，23】"-->
+    <input type="text" v-model="msg">
+    <child-component :msg=msg>
+
+    </child-component>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    var app = new Vue({
+        el:"#app",
+        components:{
+           'childComponent':{
+               props:{
+                   msg:String
+               },
+               template:'<div style="border: 1px solid red;">{{msg}}</div>'
+           }
+        },
+        data:{
+            msg:'w子组件'
+        }
+    })
+
+</script>
+</body>
+</html>

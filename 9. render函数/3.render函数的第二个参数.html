@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>render函数初步了解</title>
+
+</head>
+<body>
+
+<div id="app">
+    <child></child>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script>
+    Vue.component('child', {
+        render: function (createElement) {
+        //第二个参数非必选 数据对象 --object
+            return createElement('div',{
+                class:{
+                    fk:true,
+                    ba:false
+                },
+                style:{
+                    fontSize:'16px',
+                    color:'red',
+                },
+                //html 属性 id href src。。。
+                attrs:{
+                    id:"car",
+                    src:'www.baidu.com'
+                },
+                //组件prop
+                props:{
+                    myProp:'bar'
+                },
+                //DOM属性
+                domProps:{
+                    innerHTML:"<span style='color:blue'>我是蓝色</span>"
+                },
+                //事件监听器在"on"属性内
+                // 不支持修饰词 v-on:keyup.enter
+                //需要在处理函数中手动检查
+                on:{
+                    click:this.cilckHander
+                },
+                //仅用于组件，用于监听原生事件，不是组件内部使用
+                //vm.$emit 触发的事件
+                nativeOn:{
+                    click:this.nat
+                }
+            })
+        }
+    });
+
+
+    var app = new Vue({
+        el: "#app",
+        data: {}
+    })
+</script>
+</body>
+</html>

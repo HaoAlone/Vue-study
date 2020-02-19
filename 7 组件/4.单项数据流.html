@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单项数据流</title>
+</head>
+<body>
+<div id="app">
+    应用场景
+    <h5>
+       场景一:作为初始值保存下来
+        <child :msg="initData">
+            如果父组件传入的参数和子组件接收的参数名一样，当手动修改该时，改的时props中的值，data中的不会变
+        </child>
+        <br>
+        <hr>
+        场景二:接收动态值
+        <input type="text" v-model="width">
+        <child2 :width="width">
+
+        </child2>
+    </h5>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    var child = Vue.component('child',{
+        template:'<div @click="iclick">子组件</div>',
+        props:['msg'],
+        data:function () {
+            return {
+               //this.XXX获取prop是中的值
+                msg:this.msg
+            }
+        },
+        methods:{
+            iclick:function () {
+                this.msg = "改了"
+                console.log(this.$data)
+                console.log(this.$props)
+                console.log(this)
+            }
+        }
+    })
+    var child2 = Vue.component('child2',{
+        template:'<div :style=style>2子组件</div>',
+        props:['width'],
+        data:function () {
+            return {
+
+            }
+        },
+        computed: {
+            style:function () {
+               return {
+                   width:this.width + 'px',
+                   height:'130px',
+                   background:"red"
+               }
+            }
+        }
+    })
+    var app = new Vue({
+        el:'#app',
+        templates:{
+            "child":child,
+            'child2':child2
+        },
+        data:{
+            initData:'父组件初始值',
+            width:100,
+        }
+
+    })
+</script>
+</body>
+</html>

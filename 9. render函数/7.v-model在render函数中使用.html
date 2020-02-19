@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>render函数初步了解</title>
+
+</head>
+<body>
+
+<div id="app">
+    <!--    <child :name="name" @input="changeName">-->
+    <child v-model="name">
+
+    </child>
+    <br> {{name}}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script>
+    Vue.component('child', {
+        props: ["name"],
+        render: function (h) {
+            var _this = this;
+            return h("input", {
+                domProps: {
+                    value: _this.name
+                },
+                on: {
+                    input: function (e) {
+                        _this.$emit("input", e.target.value)
+                    }
+                }
+            })
+        }
+    });
+
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            name: "jony"
+        },
+        methods: {
+            iclick: function () {
+                this.show = !this.show;
+
+            },
+            changeName: function (value) {
+                this.name = value
+            }
+        }
+    })
+</script>
+</body>
+</html>

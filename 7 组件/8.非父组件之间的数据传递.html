@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>非父组件之间传递数据，父子组件通信</title>
+    <style>
+        #app {
+            border: 2px solid black;
+            width: 600px;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 3px;
+            margin: 100px auto 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    非父子组件通信，在根组件建立一个中间vue实例，发送放触发自定义事件，接收方
+    在组件created钩子监听该自定义事件
+    <a-component ref="a"></a-component>
+    <b-component ref="b"></b-component>
+    <hr>
+    父子组件通信
+    子拿父中数据：this.$parent.msg
+    父拿子数据: 所有子组件加ref属性，父组件通过this.$refs.a获取
+
+    <button @click="lookson">点击看子组件</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    Vue.component('a-component',{
+        template:'<div>i am a<button @click="to">点击向b传递数据</button></div>',
+        data:function () {
+            return {
+                aaa:"我是来自a组件中的数据"
+            }
+        },
+        methods:{
+            to:function () {
+                this.$root.bus.$emit('to',this.aaa)
+            }
+        }
+    })
+    Vue.component('b-component',{
+        template:'<div>来自a传递的数据:{{data}}</div>',
+        data:function () {
+            return {
+                data:'test'
+            }
+        },
+        watch:{
+            data:function (a,b) {
+                // console.log(a,b)
+            }
+        },
+        created:function () {
+            _this = this
+            this.$root.bus.$on('to',function (value) {
+                // console.log(value)
+                console.log(this)//this指向bus
+                _this.data = value;
+            })
+        }
+    })
+    const bus = new Vue({
+        data:{data:123}
+    })
+    var app = new Vue({
+        el: '#app',
+        data:{
+            bus:bus
+        },
+        methods: {
+            lookson:function () {
+                console.log(this.$refs.a)
+            }
+        }
+    })
+</script>
+</body>
+</html>

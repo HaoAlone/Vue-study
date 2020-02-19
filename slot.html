@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slot</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <default-test>
+        <p>我是默认插槽</p>
+    </default-test>
+    <slot-name>
+
+        <template v-slot:"header">
+        <p >header</p>
+        </template>
+        <template v-slot:"footer">
+        <p >footer</p>
+        </template>
+
+    </slot-name>
+</div>
+
+<script>
+    Vue.component("default-test",{
+        template:"<div>123<slot></slot></div>"
+    })
+    Vue.component("slot-name",{
+        template:"<div>" +
+            "name:" +
+            "<slot name="header">默认header</slot>" +
+                "=========="+
+            "<slot name="footer">默认footer</slot>" +
+            "</div>"
+    })
+    new Vue({
+        el:"#app",
+    })
+</script>
+</body>
+</html>

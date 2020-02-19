@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件的使用方法</title>
+</head>
+<body>
+<div id="app">
+    <my-component>
+
+    </my-component>
+    <second-component>
+
+    </second-component>
+    <third-component>
+
+    </third-component>
+    <btn-component>
+
+    </btn-component>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    // 组件命名可以是 "- "形式，也可以是驼峰命名，但组件引用只能是横线形式
+    // template必须被一个dom元素包裹
+    // 组件中data，必须是个函数，不能是个对象
+    // 原因:如果data为对象,在实例复用时，由于对象时引用类型，会造成多组件数据共享的bug
+    // jS中的实例是通过构造函数来创建的，每个构造函数可以new出很多个实例，那么每个实例都会继承原型上的方法或属性。
+    // vue的data数据其实是vue原型上的属性，数据存在于内存当中
+    // vue为了保证每个实例上的data数据的独立性，规定了必须使用函数，而不是对象。
+    // 因为使用对象的话，每个实例（组件）上使用的data数据是相互影响的，这当然就不是我们想要的了。
+    // 对象是对于内存地址的引用，直接定义个对象的话组件之间都会使用这个对象，这样会造成组件之间数据相互影响。
+    var app = new Vue({
+        el:"#app",
+        components:{
+            'my-component':{
+                template:"<div>组件一位</div>"
+            },
+            'secondComponent':{
+                template:"<div>组件第二位</div>"
+
+            },
+            'thirdComponent':{
+                template:"<div>组件第3位</div><ul>3333</ul>"
+
+            },
+            'btnComponent':{
+                template:"<button @click='plus'>{{count}}</button>",
+                data:function () {
+                    return {
+                        count:0
+                    }
+                },
+                methods:{
+                    plus:function () {
+                        this.count++
+                    }
+                }
+
+            }
+        },
+        data:{
+
+        },
+
+    })
+
+</script>
+
+</body>
+</html>

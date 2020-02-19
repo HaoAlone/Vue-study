@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>指令</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="demo" v-cloak>
+    <hr>
+    v-cloak // 加载缓慢时，解决页面闪动的问题<br>
+    {{msg}}
+    <hr>
+    v-once
+    <span v-once>{{onceData}}</span>
+<!--    只渲染一次-->
+    <hr>
+    条件渲染
+    v-if v-else v-else-if
+    尽可能的复用元素，只渲染变化的元素
+    对于不想复用的元素加上key即可
+    <div v-if="type==='name'">
+        用户名: <input type="text" placeholder="用户名" key="321">
+    </div>
+    <div v-else>
+        密码: <input type="text" placeholder="用户名" key="123">
+    </div>
+    <button @click="toggle">点击切换</button>
+    <hr>
+    v-show 实际是设置display的值，元素一直存在于dom树 <br>
+    v-if 实时渲染，v-show  元素一直存在页面中只改变 display属性
+    <div v-show="a>4">被渲染</div>
+
+    <hr>
+    v-for 用法<br>
+    (1) 遍历对象 <br>
+    <ul >
+        <li v-for="(value,key,index) in obj">
+            键值对:{{key}}
+            值:{{value}}
+            索引:{{index}}
+        </li>
+    </ul>
+    (2) 遍历数组 <br>
+    <ul>
+        <li v-for="(value , index) in arr">
+            值:{{value}}
+            索引:{{index}}
+        </li>
+    </ul>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+
+    var app = new Vue({
+        el:'#demo',
+        data:{
+            msg:'村里有个姑娘叫小芳',
+            onceData:'好看又善良',
+            type:'name',
+            a:5,
+            obj:{
+                name:'网点',
+                age:'12岁'
+            },
+            arr:[
+                {name:'五开',age:12},
+                {name:'王刚',age:23},
+            ],
+        },
+        methods:{
+            toggle:function () {
+                this.type = this.type==='name'?'password':'name'
+                console.log(this.type)
+            }
+        }
+    })
+</script>
+</body>
+</html>

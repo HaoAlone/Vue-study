@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组更新</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--push 末尾添加元素-->
+<!--pop() 移除末尾元素-->
+<!--shift() 删除数组第一个元素-->
+<!--unshift() 在首位添加一个元素-->
+<!--返回   返回添加/删除的元素-->
+
+<!--splice() 添加删除元素-->
+<!--三个参数 （1） 要删除、添加元素的索引-->
+<!--        (2) 要删除的元素个数-->
+<!--        （3） 添加的元素-->
+<!--返回 被删除的元素-->
+
+<!--sort() 排序 先将元素转成字符串,再比较utf-16码-->
+<!--参数 function(a,b) a,b是比较的元素-->
+<!--根据返回值决定排序-->
+<!--&gt;0 b排在a前面-->
+<!--=0 不变-->
+<!--<0 a排在b前面-->
+<!--sort(function(a,b){//从小到大排序-->
+<!--    return a-b-->
+<!--})-->
+
+<!--返回结果数组-->
+<!--reverse 数组翻转-->
+
+<div id="demo" v-cloak>
+    <div v-for="item in arr">{{item}}</div>
+    <button @click="sort">点击排序</button>
+    <button @click="reverse">点击反转</button>
+    <hr>
+
+<!--    数组变动无法响应,即 vue检测不到数组变化-->
+<!--    (1) 改变数组指定项-->
+    <button @click="changeTwo(1)">点击改变第二项</button>
+    <br>
+    <button @click="changeTwo(2)">点击改变第二项(splice)</button>
+    <br>
+    <!--    (2) 直接改变数组长度-->
+    <button @click="changeLen(1)">点击改变数组长度</button>
+    <br>
+    <button @click="changeLen(2)">点击改变数组长度(splice)</button>
+    <br>
+
+<!--    set 方法 this.$set(this.arr,1,'car')-->
+
+    <hr>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+
+    var app = new Vue({
+        el:'#demo',
+        data:{
+            arr:['pencil','apple','man','banana']
+        },
+        methods:{
+            sort:function () {
+                this.arr.sort(function (a,b) {
+                    return a.length - b.length
+                })
+            },
+            reverse:function(){
+              this.arr.reverse()
+            },
+            changeTwo:function (num) {
+                num ==1 ? this.arr[2] = 'potato':
+                    this.arr.splice(1,1,'potato')
+            },
+            changeLen:function (num) {
+                num ==1 ? this.arr.length =2:
+                    this.arr.splice(2)
+            }
+        }
+    })
+</script>
+</body>
+</html>

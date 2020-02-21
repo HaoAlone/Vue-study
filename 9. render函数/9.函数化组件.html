@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>render函数初步了解</title>
+
+</head>
+<body>
+
+<div id="app">
+<child :msg="msg"></child>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script>
+
+    Vue.component("child",{
+        functional:true,//表示当前vue实例无实例，无状态，
+        render:function (h,context) {
+            console.log(context)
+        }
+    })
+    var app = new Vue({
+        el: "#app",
+        data: {
+            msg: "jony"
+        },
+
+    })
+</script>
+</body>
+</html>

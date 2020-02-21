@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-router</title>
+</head>
+<body>
+<script>
+
+<!--    引用-->
+    // 1.npm install vue-router
+    // 2/建立router文件夹管理路由
+    // 3.新建js文件，编辑
+    // import router from "vue-router"
+    //
+    // Vue.use(router)
+    //
+    // export default new Router({
+    //     routes: [{
+    //         name:'',
+    //         path:'',//路由名
+    //         componen:''//渲染组件
+    //     }]
+    // })
+
+    // 4App.vue中 以router import 该js，
+    // 在Vue实例中引入 {router:router}
+    // 5.用<router-view>确定视图加载位置
+
+//    路由的跳转
+//     <router-link to="路由名">点击跳转</router-link>
+
+//    路由参数传递
+//     1. routes:[{name:'',path:'/name:id',component:''}]
+//     <router-link :to="{name:...,id:...}">...</router-link>
+//
+//     获取方法:  this.$routs.param.id
+//     2. routes:[{path:'',query:'/name',component:''}]
+//      <router-link :to="{name:...,id:...}">...</router-link>
+//
+//      获取方法:  this.$routs.query.id
+//     ！！！当使用query时,如果路由path和name相同时，router-link的to对象里path和name都可以，
+//     不然只能path
+
+
+</script>
+
+</body>
+</html>

@@ -8,12 +8,12 @@
 <body>
 
 <div id="app">
-<!--    <child>-->
-<!--        <template scope="prop" >-->
-<!--            {{prop}}-->
-<!--        </template>-->
-<!--    </child>-->
-<!--    <br>-->
+    <!--    <child>-->
+    <!--        <template scope="prop" >-->
+    <!--            {{prop}}-->
+    <!--        </template>-->
+    <!--    </child>-->
+    <!--    <br>-->
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -23,15 +23,22 @@
         props: ["name"],
         render: function (h) {
             // `<div><slot :text="子组件中的数据"></slot></div>`
-            return h('div',this.$scopedSlots.default({
-                text:this.text,
-                name:"嘿嘿嘿"
-            }))
+            return h('div', [
+                    this.$scopedSlots.default({
+                        text: this.text,
+                        name: "嘿嘿嘿"
+                    }),
+                    this.$scopedSlots.test({
+                        text: this.text,
+                        name: "嘿嘿嘿"
+                    }),
+                ]
+            )
 
         },
-        data:function () {
+        data: function () {
             return {
-                text:'子组件中的数据'
+                text: '子组件中的数据'
             }
         }
     });
@@ -41,7 +48,7 @@
         data: {
             msg: "父组件数据"
         },
-        render(h){
+        render(h) {
             return h('div', [
                 "APP",
                 h('child', {
@@ -51,14 +58,16 @@
                     scopedSlots: {
                         default: function (props) {
                             return h('span', props.text)
-                        }
+                        },
+                        //具名插槽
+                        'test': function (props) {
+                            return h('span', props.name)
+                        },
                     }
                 })
             ])
         },
-        methods: {
-
-        }
+        methods: {}
     })
 </script>
 </body>

@@ -64,13 +64,20 @@
         <item name="GROUP_NODE:vuex-app" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8258e2f-84cb-48d5-b495-1021073076b3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/image/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime only 与compiler" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/前端优化/vue打包优化" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime only 与compiler" beforeDir="false" afterPath="$PROJECT_DIR$/源码解析/runtime only 与compiler.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,11 +119,6 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="1360" />
-    <option name="width" value="80" />
-    <option name="height" value="900" />
-  </component>
   <component name="ProjectId" id="1p9cNdIteAlGWS5O8pMD0GfspP9" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="新增" />
@@ -131,14 +133,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\Vue-study\源码解析" />
       <recent name="D:\study\Vue-study\image" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -149,7 +152,7 @@
       <recent name="$PROJECT_DIR$/9. render函数" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript 调试.5.1内置指令.html">
+  <component name="RunManager" selected="Node.js.test.js">
     <configuration name="5.1内置指令.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue-study/5.1内置指令.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -159,6 +162,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.test.js" />
+        <item itemvalue="JavaScript 调试.5.1内置指令.html" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +191,7 @@
       <workItem from="1573524254343" duration="463000" />
       <workItem from="1580883657252" duration="8263000" />
       <workItem from="1581682931998" duration="66260000" />
-      <workItem from="1614598715606" duration="2597000" />
+      <workItem from="1614598715606" duration="7262000" />
     </task>
     <servers />
   </component>
@@ -199,16 +203,52 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="2434" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614598954164">
+    <state x="2434" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614663945623">
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
-    <state x="2434" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614598954164" />
+    <state x="2434" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614663945623" />
+    <state x="2420" y="188" key="FileChooserDialogImpl" timestamp="1614684267197">
+      <screen x="1920" y="3" width="1440" height="860" />
+    </state>
+    <state x="2420" y="188" key="FileChooserDialogImpl/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684267197" />
+    <state width="1418" height="213" key="GridCell.Tab.0.bottom" timestamp="1614684268227">
+      <screen x="1920" y="3" width="1440" height="860" />
+    </state>
+    <state width="1418" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684268227" />
+    <state width="1418" height="213" key="GridCell.Tab.0.center" timestamp="1614684268227">
+      <screen x="1920" y="3" width="1440" height="860" />
+    </state>
+    <state width="1418" height="213" key="GridCell.Tab.0.center/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684268227" />
+    <state width="1418" height="213" key="GridCell.Tab.0.left" timestamp="1614684268227">
+      <screen x="1920" y="3" width="1440" height="860" />
+    </state>
+    <state width="1418" height="213" key="GridCell.Tab.0.left/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684268227" />
+    <state width="1418" height="213" key="GridCell.Tab.0.right" timestamp="1614684268227">
+      <screen x="1920" y="3" width="1440" height="860" />
+    </state>
+    <state width="1418" height="213" key="GridCell.Tab.0.right/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684268227" />
+    <state x="2223" y="77" width="916" height="712" key="SettingsEditor" timestamp="1614601762563">
+      <screen x="1920" y="3" width="1440" height="860" />
+    </state>
+    <state x="2223" y="77" width="916" height="712" key="SettingsEditor/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614601762563" />
   </component>
 </project>

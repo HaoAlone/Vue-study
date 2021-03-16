@@ -1,0 +1,59 @@
+**webpack打包**<br>
+****路由异步加载****<br>
+>const example = () => import(/* webpackChunkName: "group-example" */ '../components/example.vue')
+使用import讲组件分割成一个个晓得单独的文件,缩小文件体积
+****element组件优化****<br>
+```
+按需引入
+ import {
+   Form,
+   Button,
+   Table,
+ } from 'element-ui'
+ 
+ >// 按需使用
+ Vue.use(Form)
+ Vue.use(Button)
+> Vue.use(Table)
+```
+按需引入组件代替全局引入和使用  
+****webpack配置优化****<br>
+***webpack-bundle-analyzer插件***<br>
+可以看到项目各模块的大小,打包前,打包后,压缩后<br>
+
+1.externals配置
+index.html
+```<script
+   src="https://code.jquery.com/jquery-3.1.0.js"
+   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+   crossorigin="anonymous">
+ </script>
+```
+webpack.config.js
+```
+externals: {
+     jquery: 'jQuery'
+   }
+```
+这样就剥离了那些不需要改动的依赖模块，换句话，下面展示的代码还可以正常运行：
+```
+import $ from 'jquery';
+
+$('.my-element').animate(...);
+```
+
+2.开启Gzip压缩和禁用资源地图
+```
+module.exports = {
+  // ...
+  build: {
+    productionSourceMap: false,
+    productionGzip: true,
+  }
+}
+3.图片压缩
+
+```
+
+****项目依赖包统计分析****<br>
+

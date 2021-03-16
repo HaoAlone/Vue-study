@@ -1,14 +1,16 @@
-var maxSequence = function(arr){
-    let min = 0;let sum = 0; let res = 0;
-    for(let i=0,len=arr.length;i<len;i++){
-        sum+=arr[i];
-        min = Math.min(sum,min);
-        res = Math.max(res,sum-min);
-        console.log(min,sum,res)
-
+class PersonClass {
+    constructor(name) {
+        this.name = name
     }
-    return res;
+    sayName(){
+        console.log(this.name)
+    }
 }
 
-console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+let person = new PersonClass('王博士')
+console.log(person) //PersonClass { name: '王博士' }
+console.log(person instanceof PersonClass) //true
+console.log(person instanceof Object) // true
 
+console.log(typeof PersonClass) // function
+console.log(typeof PersonClass.prototype.sayName) // function

@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "flow-bin": "^0.146.0"
+  },
+  "scripts": {
+    "flow": "flow"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
+}

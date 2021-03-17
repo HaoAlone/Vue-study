@@ -74,10 +74,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8258e2f-84cb-48d5-b495-1021073076b3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/前端优化/vue打包优化" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-code/src/notes/book（随堂电子书）.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-code/src/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime only 与compiler" beforeDir="false" afterPath="$PROJECT_DIR$/源码解析/runtime only 与compiler.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flow/配置.md" beforeDir="false" afterPath="$PROJECT_DIR$/flow/配置.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/source-code/src/assets/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/源码解析/runtime only 与compiler.md" beforeDir="false" afterPath="$PROJECT_DIR$/source-code/src/notes/1.runtime only 与compiler.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,23 +94,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>all[i]</find>
-      <find>true</find>
-      <find>toggle</find>
-      <find>doThis</find>
-      <find>cou</find>
-      <find>8080</find>
-      <find>ref</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>let sum</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/10 vue-cli/my-project</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -133,23 +118,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source-code/src" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\study\Vue-study\源码解析" />
-      <recent name="D:\study\Vue-study\image" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\Vue-study\source-code\src" />
       <recent name="$PROJECT_DIR$/10 vue-cli/vuex-app/src/components" />
       <recent name="$PROJECT_DIR$/10 vue-cli" />
       <recent name="$PROJECT_DIR$/10 vue-cli/my-project/src/components" />
       <recent name="$PROJECT_DIR$/9. render函数" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\Vue-study\source-code\src\assets" />
+      <recent name="D:\study\Vue-study\source-code\src\notes" />
+      <recent name="D:\study\Vue-study\source-code\src" />
+      <recent name="D:\study\Vue-study\源码解析" />
+      <recent name="D:\study\Vue-study\image" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.test.js">
@@ -192,6 +180,7 @@
       <workItem from="1580883657252" duration="8263000" />
       <workItem from="1581682931998" duration="66260000" />
       <workItem from="1614598715606" duration="7262000" />
+      <workItem from="1615861124712" duration="15354000" />
     </task>
     <servers />
   </component>
@@ -220,6 +209,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2434" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614663945623">
@@ -250,5 +240,17 @@
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
     <state x="2223" y="77" width="916" height="712" key="SettingsEditor/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614601762563" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/source-code/node_modules/vue/dist/vue.esm.js</url>
+          <line>4978</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

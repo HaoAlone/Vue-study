@@ -74,12 +74,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8258e2f-84cb-48d5-b495-1021073076b3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source-code/src/notes/book（随堂电子书）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source-code/src/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11.property/1.$attrs和$listerns.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11.property/1.1.$attrs和$listerns.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11.property/images/1.$attrs/$attrs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11.property/images/1.$attrs/attrs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11.property/images/1.$attrs/inheritAttrs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11.property/images/1.$attrs/inheritMore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-code/src/assets/process.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-code/src/notes/整体流程/1.整体流程.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-code/src/notes/整体流程/2.initMixin.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flow/配置.md" beforeDir="false" afterPath="$PROJECT_DIR$/flow/配置.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/source-code/src/assets/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/源码解析/runtime only 与compiler.md" beforeDir="false" afterPath="$PROJECT_DIR$/source-code/src/notes/1.runtime only 与compiler.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,8 +95,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -118,7 +123,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/source-code/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/11.property" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
@@ -126,21 +131,27 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\Vue-study\11.property" />
       <recent name="D:\study\Vue-study\source-code\src" />
       <recent name="$PROJECT_DIR$/10 vue-cli/vuex-app/src/components" />
       <recent name="$PROJECT_DIR$/10 vue-cli" />
       <recent name="$PROJECT_DIR$/10 vue-cli/my-project/src/components" />
-      <recent name="$PROJECT_DIR$/9. render函数" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\Vue-study\11.property\images\1.$attrs" />
+      <recent name="D:\study\Vue-study" />
+      <recent name="D:\study\Vue-study\source-code\src\notes\整体流程" />
       <recent name="D:\study\Vue-study\source-code\src\assets" />
       <recent name="D:\study\Vue-study\source-code\src\notes" />
-      <recent name="D:\study\Vue-study\source-code\src" />
-      <recent name="D:\study\Vue-study\源码解析" />
-      <recent name="D:\study\Vue-study\image" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.test.js">
+  <component name="RunManager" selected="JavaScript 调试.1.$attrs和$listerns.html (1)">
+    <configuration name="1.$attrs和$listerns.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue-study/11.property/1.$attrs和$listerns.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="1.$attrs和$listerns.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue-study/11.实例property/1.$attrs和$listerns.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="5.1内置指令.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue-study/5.1内置指令.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -149,6 +160,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript 调试.1.$attrs和$listerns.html (1)" />
+        <item itemvalue="JavaScript 调试.1.$attrs和$listerns.html" />
         <item itemvalue="Node.js.test.js" />
         <item itemvalue="JavaScript 调试.5.1内置指令.html" />
       </list>
@@ -180,7 +193,7 @@
       <workItem from="1580883657252" duration="8263000" />
       <workItem from="1581682931998" duration="66260000" />
       <workItem from="1614598715606" duration="7262000" />
-      <workItem from="1615861124712" duration="15354000" />
+      <workItem from="1615861124712" duration="35414000" />
     </task>
     <servers />
   </component>
@@ -212,6 +225,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2479" y="136" key="#Web浏览器" timestamp="1616500416826">
+      <screen x="1920" y="3" width="1440" height="860" />
+    </state>
+    <state x="2479" y="136" key="#Web浏览器/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1616500416826" />
     <state x="2434" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614663945623">
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
@@ -220,26 +237,34 @@
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
     <state x="2420" y="188" key="FileChooserDialogImpl/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684267197" />
-    <state width="1418" height="213" key="GridCell.Tab.0.bottom" timestamp="1614684268227">
+    <state width="1401" height="210" key="GridCell.Tab.0.bottom" timestamp="1616500935420">
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
-    <state width="1418" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684268227" />
-    <state width="1418" height="213" key="GridCell.Tab.0.center" timestamp="1614684268227">
+    <state width="1401" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1616500935420" />
+    <state width="1401" height="210" key="GridCell.Tab.0.center" timestamp="1616500935420">
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
-    <state width="1418" height="213" key="GridCell.Tab.0.center/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684268227" />
-    <state width="1418" height="213" key="GridCell.Tab.0.left" timestamp="1614684268227">
+    <state width="1401" height="210" key="GridCell.Tab.0.center/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1616500935420" />
+    <state width="1401" height="210" key="GridCell.Tab.0.left" timestamp="1616500935420">
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
-    <state width="1418" height="213" key="GridCell.Tab.0.left/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684268227" />
-    <state width="1418" height="213" key="GridCell.Tab.0.right" timestamp="1614684268227">
+    <state width="1401" height="210" key="GridCell.Tab.0.left/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1616500935420" />
+    <state width="1401" height="210" key="GridCell.Tab.0.right" timestamp="1616500935420">
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
-    <state width="1418" height="213" key="GridCell.Tab.0.right/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614684268227" />
+    <state width="1401" height="210" key="GridCell.Tab.0.right/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1616500935420" />
     <state x="2223" y="77" width="916" height="712" key="SettingsEditor" timestamp="1614601762563">
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
     <state x="2223" y="77" width="916" height="712" key="SettingsEditor/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614601762563" />
+    <state x="2363" y="152" width="582" height="570" key="find.popup" timestamp="1616500166367">
+      <screen x="1920" y="3" width="1440" height="860" />
+    </state>
+    <state x="2363" y="152" width="582" height="570" key="find.popup/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1616500166367" />
+    <state x="2317" y="184" width="672" height="678" key="search.everywhere.popup" timestamp="1616144261989">
+      <screen x="1920" y="3" width="1440" height="860" />
+    </state>
+    <state x="2317" y="184" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1616144261989" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

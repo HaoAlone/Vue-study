@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.$attrs和$listerns</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <div class="container">
+<!--        <child :name="data1" :data2="data2"></child>-->
+        <inherit type="date" name="王八"></inherit>
+    </div>
+</div>
+<script>
+let app = new Vue({
+    el:'#app',
+    data:{
+       data1:'data1',
+       data2:'data2'
+    },
+    components:{
+        // 'child':{
+        //     template:`<div>
+        //         123{{name}}
+        //         <grand v-bind="$attrs"></grand>
+        //     </div>`,
+        //     props:['name'],
+        //     // inheritAttrs:false,
+        //     components: {
+        //       'grand':{
+        //         template:`<div class="grand">孙子组件,:{{$attrs}}</div>`
+        //       },
+        //     },
+        //    mounted:function(){
+        //      console.log(this)//
+        //    },
+        // },
+        'inherit':{
+            template:`<input type="number" />`
+        }
+    }
+})
+</script>
+</body>
+</html>

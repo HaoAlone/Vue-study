@@ -1,0 +1,33 @@
+.wb-logo{
+margin-left: 130px;
+}
+.wb-center{
+width:1000px;
+margin:0 auto;
+margin-top: 80px;
+}
+.wb-per{
+width: 374px;
+margin:0 auto;
+margin-top: 72px;
+}
+.wb-erinfo{
+font-weight: 700;
+font-size: 20px;
+}
+.wb-erchange{
+display: block;
+text-align: center;
+margin-top: 24px;
+padding:25px 100px;
+border:2px solid #797979;
+color:#797979;
+text-decoration: none;
+}
+.wb-fr{
+float: right;
+display: block;
+margin-top: 30px;
+color: #0000ff;
+text-decoration: none;
+}

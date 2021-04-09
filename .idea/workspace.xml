@@ -74,17 +74,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8258e2f-84cb-48d5-b495-1021073076b3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/11.property/1.$attrs和$listerns.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11.property/1.1.$attrs和$listerns.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11.property/images/1.$attrs/$attrs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11.property/images/1.$attrs/attrs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11.property/images/1.$attrs/inheritAttrs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11.property/images/1.$attrs/inheritMore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source-code/src/assets/process.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source-code/src/notes/整体流程/1.整体流程.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source-code/src/notes/整体流程/2.initMixin.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bilibili.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provide_inject/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-code/src/assets/stateMixin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-code/src/components/provide.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-code/src/notes/整体流程/3.stateMixin.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/index/error.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source-code/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/source-code/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source-code/src/notes/整体流程/2.initMixin.md" beforeDir="false" afterPath="$PROJECT_DIR$/source-code/src/notes/整体流程/2.initMixin.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source-code/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/source-code/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zz.html" beforeDir="false" afterPath="$PROJECT_DIR$/zz.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,9 +94,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -123,29 +123,29 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/11.property" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source-code/src/assets" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\study\Vue-study\11.property" />
-      <recent name="D:\study\Vue-study\source-code\src" />
-      <recent name="$PROJECT_DIR$/10 vue-cli/vuex-app/src/components" />
-      <recent name="$PROJECT_DIR$/10 vue-cli" />
-      <recent name="$PROJECT_DIR$/10 vue-cli/my-project/src/components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\study\Vue-study\11.property\images\1.$attrs" />
       <recent name="D:\study\Vue-study" />
+      <recent name="D:\study\Vue-study\11.property\images\1.$attrs" />
       <recent name="D:\study\Vue-study\source-code\src\notes\整体流程" />
       <recent name="D:\study\Vue-study\source-code\src\assets" />
       <recent name="D:\study\Vue-study\source-code\src\notes" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\Vue-study\source-code\src\assets" />
+      <recent name="D:\study\Vue-study\11.property" />
+      <recent name="D:\study\Vue-study\source-code\src" />
+      <recent name="$PROJECT_DIR$/10 vue-cli/vuex-app/src/components" />
+      <recent name="$PROJECT_DIR$/10 vue-cli" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript 调试.1.$attrs和$listerns.html (1)">
+  <component name="RunManager" selected="JavaScript 调试.bilibili.html">
     <configuration name="1.$attrs和$listerns.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue-study/11.property/1.$attrs和$listerns.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -155,11 +155,15 @@
     <configuration name="5.1内置指令.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue-study/5.1内置指令.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="bilibili.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Vue-study/bilibili.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="test.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript 调试.bilibili.html" />
         <item itemvalue="JavaScript 调试.1.$attrs和$listerns.html (1)" />
         <item itemvalue="JavaScript 调试.1.$attrs和$listerns.html" />
         <item itemvalue="Node.js.test.js" />
@@ -193,7 +197,8 @@
       <workItem from="1580883657252" duration="8263000" />
       <workItem from="1581682931998" duration="66260000" />
       <workItem from="1614598715606" duration="7262000" />
-      <workItem from="1615861124712" duration="35414000" />
+      <workItem from="1615861124712" duration="41395000" />
+      <workItem from="1616660993883" duration="41204000" />
     </task>
     <servers />
   </component>
@@ -257,25 +262,13 @@
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
     <state x="2223" y="77" width="916" height="712" key="SettingsEditor/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1614601762563" />
-    <state x="2363" y="152" width="582" height="570" key="find.popup" timestamp="1616500166367">
+    <state x="2732" y="142" width="582" height="570" key="find.popup" timestamp="1617775981762">
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
-    <state x="2363" y="152" width="582" height="570" key="find.popup/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1616500166367" />
+    <state x="2732" y="142" width="582" height="570" key="find.popup/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1617775981762" />
     <state x="2317" y="184" width="672" height="678" key="search.everywhere.popup" timestamp="1616144261989">
       <screen x="1920" y="3" width="1440" height="860" />
     </state>
     <state x="2317" y="184" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.3.1440.860@1920.3.1440.860" timestamp="1616144261989" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/source-code/node_modules/vue/dist/vue.esm.js</url>
-          <line>4978</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -7,7 +7,29 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  provide(){
+    return {
+      'sss':{
+        name:123,
+        age:33
+      }
+    }
+  },
+  data(){
+    return{
+      name:'test'
+    }
+  },
+  beforeCreate() {
+    console.log(this.name)
+    this.get()
+  },
+  methods:{
+    get(){
+      console.log(this.name)
+    }
+  }
 }
 </script>
 

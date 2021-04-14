@@ -25,6 +25,10 @@ export default {
     console.log(this.name)
     this.get()
   },
+  mounted() {
+    console.log(this._ctor)
+
+  },
   methods:{
     get(){
       console.log(this.name)

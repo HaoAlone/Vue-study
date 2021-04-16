@@ -1,0 +1,91 @@
+### eventsMixin
+主要是在Vue原型上定义$on,$emit,$off,$once等实例方法
+vm._events = {eventName:[...events]}
+**文件位置:/src/core/instance/event.js**
+
+#### $on
+```js
+Vue.prototype.$on = function (event: string | Array<string>, fn: Function): Component {
+    const vm: Component = this
+    if (Array.isArray(event)) {
+      for (let i = 0, l = event.length; i < l; i++) {
+        vm.$on(event[i], fn)
+      }
+    } else {
+      (vm._events[event] || (vm._events[event] = [])).push(fn)
+      // optimize hook:event cost by using a boolean flag marked at registration
+      // instead of a hash lookup
+      if (hookRE.test(event)) {
+        vm._hasHookEvent = true
+      }
+    }
+    return vm
+  }
+```
+代码分析:
+1. event参数可以是数组且是数组的情况下,通过遍历event,递归调用$on方法
+2. 所有的事件都存在_events私有属性上,这是在initEvents时被定义的,空对象
+3._events中使用数组来存储事件,所以监听事件可以有多个监听器
+####$off
+```js
+Vue.prototype.$off = function (event?: string | Array<string>, fn?: Function): Component {
+    const vm: Component = this
+    // all
+    if (!arguments.length) {
+      vm._events = Object.create(null)
+      return vm
+    }
+    // array of events
+    if (Array.isArray(event)) {
+      for (let i = 0, l = event.length; i < l; i++) {
+        vm.$off(event[i], fn)
+      }
+      return vm
+    }
+    // specific event
+    const cbs = vm._events[event]
+    if (!cbs) {
+      return vm
+    }
+    if (!fn) {
+      vm._events[event] = null
+      return vm
+    }
+    // specific handler
+    let cb
+    let i = cbs.length
+    while (i--) {
+      cb = cbs[i]
+      if (cb === fn || cb.fn === fn) {
+        cbs.splice(i, 1)
+        break
+      }
+    }
+    return vm
+  }
+```
+代码分析:
+1. 不传参数时,清除所有的事件监听
+2. event参数可以是数组且是数组的情况下,通过遍历event,递归调用$off方法
+3. 只传event不传fn,清除该事件下的所有监听器
+4. event和fn不为空时,清除event对应监听器数组中的fn
+#### $emit
+```js
+Vue.prototype.$emit = function (event: string): Component {
+    const vm: Component = this
+    let cbs = vm._events[event]
+    if (cbs) {
+      cbs = cbs.length > 1 ? toArray(cbs) : cbs
+      const args = toArray(arguments, 1)
+      const info = `event handler for "${event}"`
+      for (let i = 0, l = cbs.length; i < l; i++) {
+        invokeWithErrorHandling(cbs[i], vm, args, vm, info)
+      }
+    }
+    return vm
+  }
+```
+代码分析:
+
+
+

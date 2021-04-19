@@ -86,6 +86,24 @@ Vue.prototype.$emit = function (event: string): Component {
   }
 ```
 代码分析:
+1.传入触发事件名event,以及处理器所需参数args
+2.invokeWithErrorHandling实际就是用try/catch包装了一下监听器,当报错时用handleError方法对报错进行处理
 
-
+### $once
+$once本质是在触发了一次事件监听器后,移除改监听器
+```js
+Vue.prototype.$once = function (event: string, fn: Function): Component {
+    const vm: Component = this
+    function on () {
+      vm.$off(event, on)
+      fn.apply(vm, arguments)
+    }
+    on.fn = fn
+    vm.$on(event, on)
+    return vm
+  }
+```
+代码分析:
+1. 封装一个监听回调函数,内容包括,移除该监听器,执行监听函数,并将该新函数与fn进行关联
+> $off中的cb.fn === fn就是为了判断该监听器是否是$once中注册的
 
